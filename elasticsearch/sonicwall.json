@@ -1,0 +1,90 @@
+{
+  "version": 2,
+  "priority": 10,
+  "template": {
+    "mappings": {
+      "properties": {
+        "sonicwall": {
+          "properties": {
+            "cfs": {
+              "properties": {
+                "code": {
+                  "type": "long"
+                },
+                "category": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "application": {
+              "properties": {
+                "id": {
+                  "type": "long"
+                }
+              }
+            },
+            "vpn": {
+              "properties": {
+                "policy": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "session": {
+              "properties": {
+                "type": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "action": {
+              "type": "keyword"
+            },
+            "rule": {
+              "properties": {
+                "id": {
+                  "type": "long"
+                }
+              }
+            },
+            "category": {
+              "properties": {
+                "id": {
+                  "type": "long"
+                }
+              }
+            },
+            "event": {
+              "properties": {
+                "note": {
+                  "type": "text"
+                },
+                "id": {
+                  "type": "long"
+                }
+              }
+            },
+            "portal": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    },
+    "aliases": {
+      "all-sonicwall": {},
+      "all-firewall": {}
+    }
+  },
+  "index_patterns": [
+    "sonicwall-*"
+  ],
+  "composed_of": [
+    "general-settings",
+    "general-mappings",
+    "ecs-networking"
+  ],
+  "_meta": {
+    "description": "This template defines Sonicwall properties."
+  }
+}
